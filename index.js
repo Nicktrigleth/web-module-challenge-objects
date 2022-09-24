@@ -19,6 +19,8 @@ The function should:
 function createMenuItem(name, price, catergory){
   return {name, price, catergory};
 }
+
+
 console.log('task 1a:', createMenuItem('tacos', 8, 'Lunch'));
 
 
@@ -31,6 +33,8 @@ Test your createMenuItems function by doing the following:
   
   For example: createMenuItem("pizza",5,"lunch") would return this as the object: {name:"Pizza",price:5,category:"lunch"}
 */
+
+
 console.log('task 1b:', createMenuItem('burgers', 5, 'Lunch'));
 console.log('task 1b:', createMenuItem('waffles', 10, 'Brunch'));
 console.log('task 1b:', createMenuItem('pie', 5, 'Dessert'));
@@ -61,6 +65,8 @@ const burger = {
     }
   }
 }
+
+
 console.log(burger.discount('teacher'));
 
 
@@ -81,6 +87,8 @@ const reviews = [
 Using the reviews array above:
   1. log only Julius' feedback to the console - no function needed 
 */
+
+
 console.log(reviews[5].feedback);
 
 
@@ -93,6 +101,8 @@ function updateKey(array, index, key, value) {
   array[index][key] = value;
   return array;
 }
+
+
 console.log(updateKey(reviews, 7, 'feedback', "this place is chill with really cool people, great for getting work done on weekdays"));
 
 
@@ -112,6 +122,8 @@ function addReview(reviews, name, rating, feedback){
   reviews.push({name: name, rating: rating, feedback: feedback});
   return reviews;
 }
+
+
 console.log(addReview(reviews, 'Nick', 3, 'Good Place'));
 
 
@@ -128,8 +140,10 @@ Use the getReviewByIndex function below to do the following:
 
 
 function getReviewByIndex(array, number) {
-  return `${array[number].name} gave the restaurant a ${array[number].rating} star review, there feedback was: ${array[number].feedback}`;
+  return `${array[number].name} gave the restaurant a ${array[number].rating} star review, and their feedback was: ${array[number].feedback}`;
 }
+
+
 console.log(getReviewByIndex(reviews, 5));
 
 
@@ -150,6 +164,8 @@ Use the getLastReview function below to do the following:
 function getLastReview(array) {
   return `${array[array.length -1].name} gave the restaurant a ${array[array.length -1].rating} star review, and thier feedback was: ${array[array.length -1].feedback}`
 } 
+
+
 console.log(getLastReview(reviews));
 
 
