@@ -16,8 +16,8 @@ The function should:
 */
 
 
-function createMenuItem(name, price, catergory){
-  return {name, price, catergory};
+function createMenuItem(name, price, category){
+  return {name, price, category};
 }
 
 
@@ -124,7 +124,7 @@ function addReview(reviews, name, rating, feedback){
 }
 
 
-console.log(addReview(reviews, 'Nick', 3, 'Good Place'));
+console.log('task 5:', addReview(reviews, 'Nick', 3, 'Good Place'));
 
 
 
