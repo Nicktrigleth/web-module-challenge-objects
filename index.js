@@ -118,7 +118,7 @@ Use the addReview function below to do the following:
 */
 
 
-function addReview(array, reviews, name, rating, feedback){
+function addReview(reviews, name, rating, feedback){
   reviews.push({name: name, rating: rating, feedback: feedback});
   return reviews;
 }
