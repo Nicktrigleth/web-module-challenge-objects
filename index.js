@@ -16,10 +16,10 @@ The function should:
 */
 
 
-function createMenuItem(/*Your code here*/){
-  /*Your code here*/
+function createMenuItem(name, price, catergory){
+  return {name, price, catergory};
 }
-
+console.log('task 1a:', createMenuItem('tacos', 8, 'Lunch'));
 
 
 /* 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 1b (not auto-tested): 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀
@@ -31,7 +31,9 @@ Test your createMenuItems function by doing the following:
   
   For example: createMenuItem("pizza",5,"lunch") would return this as the object: {name:"Pizza",price:5,category:"lunch"}
 */
-
+console.log('task 1b:', createMenuItem('burgers', 5, 'Lunch'));
+console.log('task 1b:', createMenuItem('waffles', 10, 'Brunch'));
+console.log('task 1b:', createMenuItem('pie', 5, 'Dessert'));
 
 
 /* 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 2: 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀
@@ -51,8 +53,15 @@ const burger = {
   name: "Burger", 
   price: 18, 
   category: "Lunch", 
-  
+  discount: function(person){
+    if(person === 'teacher' || person === 'student'){
+      return this.price - (this.price * -.25);
+    }else if(person === 'public'){
+      return this.price - (this.price * 0.10);
+    }
+  }
 }
+console.log(burger.discount('teacher'));
 
 
 
@@ -72,7 +81,7 @@ const reviews = [
 Using the reviews array above:
   1. log only Julius' feedback to the console - no function needed 
 */
-
+console.log(reviews[5].feedback);
 
 
 /* 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 4 (not auto-tested): 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 
@@ -80,7 +89,11 @@ Reyna's feedback is missing! Use what you know to do the following: (no function
   1. Add this feedback to Reyna's rating - "this place is chill with really cool people, great for getting work done on weekdays"
   2. log the reviews array to the console to check your work
 */
-
+function updateKey(array, index, key, value) {
+  array[index][key] = value;
+  return array;
+}
+console.log(updateKey(reviews, 7, 'feedback', "this place is chill with really cool people, great for getting work done on weekdays"));
 
 
 /* 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 5: 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀
@@ -95,9 +108,11 @@ Use the addReview function below to do the following:
 */
 
 
-function addReview(/*Your Code Here */){
-  /*Your Code Here */
+function addReview(reviews, name, rating, feedback){
+  reviews.push({name: name, rating: rating, feedback: feedback});
+  return reviews;
 }
+console.log(addReview(reviews, 'Nick', 3, 'Good Place'));
 
 
 
